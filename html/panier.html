@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Orinoco est le site de référence de vente des appareils photos vintage">
+        <meta name="robots" content="index, follow">
+        <meta name="twitter:card" content="">
+        <meta name="twitter:site" content="">
+        <meta name="twitter:title" content="Orinoco">
+        <meta name="twitter:description" content="Orinoco est le site de référence de vente des appareils photos vintage">
+        <meta name="twitter:image" content="">
+        <meta property="og:title" content="Orinoco"/>
+        <meta property="og:type" content="website"/>
+        <meta property="og:url" content=""/>
+        <meta property="og:image" content=""/>
+        <meta property="og:description" content="Orinoco est le site de référence de vente des appareils photos vintage">
+        <title>Orinoco mon panier</title>
+        <link rel="stylesheet" href="../bootstrap-4.4.1/scss/bootstrap.css">
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+        <link rel="stylesheet" href="../style.css">
+    </head>
+    <body>
+        <div class="container-fluid" id="global">
+            <header>
+                <div class="row">
+                    <div class="col">
+                        <nav class="navbar navbar-light" id="navpan">
+                            <img  id="logo2" src="../images/chario.png" alt="Logo de l'entreprise Orinoco">
+                            <a href="../index.html"><img  id="title2" src="../images/OrinocoT.png" alt="titre de l'entreprise Orinoco"></a> 
+                        </nav>
+                    </div>
+                </div>
+            </header>
+            <h1>Mon panier</h1>
+            <h2 id="h2">Le panier est vide</h2>
+            <table class="table table-bordered  table-sm" id='table'>
+                <thead id="thead">
+                    <tr>
+                        <th scope="col">Article</th>
+                        <th scope="col">Prix</th>
+                        <th scope="col">quantité</th>
+                        <th scope="col">Sous-total</th>
+                        <th scope="col"></th>
+                    </tr>
+                </thead>
+                <tbody id="tbody"></tbody>
+            </table>
+            <div id="panierVide">
+                <button id="deleteAll" class="btn btn-danger">Vider le Panier</button>
+            </div>
+            <div id="buttonDiv">
+                <a href="../index.html"><button class="btn btn-primary" id="btnCont">Continuer mes achats</button></a>
+            </div>
+           
+            <table class="table table-bordered  table-sm" id="total">
+                <thead>
+                    <th scope="col">Total</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td id="somme"></td>
+                    </tr>
+                </tbody>
+            </table>
+            <h3 id="h3">Mes coordonnées</h3>
+            <form id="form"  method="POST">
+                <div class="form-group col-lg-3 col-sm-6">
+                    <label for="firstName">Prénom</label>
+                    <input type="text" class="form-control" name="firstName" placeholder="Prénom">
+                    <small id="smallFirstName"></small>
+                </div>
+                <div class="form-group col-lg-3 col-sm-6">
+                    <label for="lastname">Nom</label>
+                    <input type="text" class="form-control" name="lastName" placeholder="nom">
+                    <small id="smallLastName"></small>
+                </div>
+                <div class="form-group col-lg-3 col-sm-6">
+                    <!--<label for="inputNumber">Numéro de rue</label>
+                    <input type="text" class="form-control col-2" name="inputNumber" placeholder="N°" required="required">
+                    <small id="smallNumber"></small>-->
+                    <label for="inputAddress">Adresse</label>
+                    <input type="text" class="form-control" name="address" placeholder="Exemple: 12 Rue des Regex">
+                    <small id="smallAdress"></small>
+                </div>
+                <div class="form-group col-lg-3 col-sm-6">
+                    <label for="inputCity">Ville</label>
+                    <input type="text" class="form-control" name="city" placeholder="Ville">
+                    <small id="smallCity"></small>
+                </div>
+                <div class="form-group col-lg-3 col-sm-6">
+                    <label for="email">email</label>
+                    <input type="email" class="form-control" name="email" placeholder="email">
+                    <small id="smallEmail"></small>
+                </div>
+                <div id="confirm">
+                    <button class="btn btn-primary" name="submit" id="submit">Terminer ma commande</button>
+                </div>
+            </form>
+            <footer id="foot">
+                <div class="row" id="flex3">
+                    <p id="copy">© Copyright 2020 tous droits réservés</p>
+                </div>
+                <div class="row" id="flex4">
+                    <img src="../images/Orinoco.png" alt="Logo de l'entreprise Orinoco">
+                </div>
+            </footer>
+        </div>
+        <script src="../panier.js"></script>
+    </body>
+</html>

@@ -1,0 +1,248 @@
+html, body{
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+    
+}
+
+.container-fluid {
+    margin:0;
+    padding:0;
+    width: 100%;
+    height: 100%;
+    }
+
+#logo, #logo2{
+    width: 5%;
+}
+
+#navpan{
+    display: flex;  
+    justify-content: center; 
+}
+
+h1{
+    text-align: center;
+    background-color: #f3ebf3;
+}
+
+#panier{
+    color: black;
+    font-size: 1.2em;
+}
+
+.bag{
+    font-size: 2.7em;
+    margin-bottom: 35px;
+    color:rgb(174, 114, 235);
+    &:hover{
+       color : rgb(115, 54, 177);
+    }
+}
+  
+h3{
+    font-size: 2.6em;
+}
+
+#ref{
+    font-size: .6em;
+}
+
+.buttons{
+    margin-bottom: 5%;
+}
+
+#Acceuil{
+    width: 100%;
+}
+
+.navbar {
+background-color: #f3ebf3;
+}
+
+#image{
+    width: 100%;
+    position: absolute;
+    display: block;
+}
+
+#consult {
+    text-align: center;
+    font-size: 50px;
+    
+}
+
+p{
+    font-size: 1.4em;
+}
+
+#copy{
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.proDiv{
+    text-align: center;
+    border-bottom: 1px solid black;
+}
+
+#layDiv{
+    text-align: center;
+}
+
+.buttons{
+    width: 25%;
+    height: 7.5%;
+    font-size: 1.8em;
+        &:hover{
+            background-color: rgb(211, 146, 236);
+            color: springgreen;
+            &:active{
+                background-color: rgb(150, 89, 248);
+                color: palegreen;
+            }
+        }
+}
+
+#quantity{
+    padding-bottom: 3% ;
+}
+
+#flex3{
+display: flex;
+justify-content: center;
+background-color: #f3ebf3;
+align-items: center;
+}
+
+#flex4{
+    display: flex;
+    justify-content: center;
+    background-color: #f3ebf3;
+    }
+
+#flex4 img {
+    width: 10%;
+}
+
+#buttonDiv{
+    text-align: center;
+    margin-bottom: 4%;
+}
+
+.moinq{
+    margin-right: 5%;
+}
+
+.plus{
+    margin-left: 5%;
+}
+
+#total{
+    font-size: 1.4em;
+    font-weight: bolder;
+}
+
+#panierVide{
+    text-align: center;
+    margin-bottom: 1.5%;
+};
+
+#h2{
+    text-align: center;
+}
+
+#h3{
+    text-align: center;
+}
+
+#ima{
+    margin-right: 15%;
+}
+
+
+.form-group{
+    margin: auto;
+}
+
+#final{
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+#submit{
+    margin-top: 2%;
+    margin-bottom: 2%; 
+}
+
+#confirm{
+    text-align: center;
+}
+
+#total{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 15%;
+    margin-bottom: 2%;
+}
+
+#table{
+    text-align: center;
+}
+
+#somme{
+    height:10%;
+}
+
+.plus{
+    margin-left: 10%;
+}
+
+.moins{
+    margin-right: 10%;
+}
+
+#bravo, #merci{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#return{
+  text-align: center;
+}
+
+@media screen and (max-width:756px){
+
+    #title {
+        width: 40%;
+    }
+
+    h1{
+        font-size: 1em;
+    }
+
+    #panier{
+        font-size: .5em;
+    }
+
+    #consult{
+        font-size: 1.3em;
+    }
+        
+    h3{
+        font-size: 1.2em;
+    }
+    
+    p{
+        font-size: .6em;
+    }
+
+    .buttons{
+        font-size: .5em;
+    }
+
+    #copy{
+        font-size: .4em;
+    }
+}
+
