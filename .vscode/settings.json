@@ -16,5 +16,8 @@
         "latex",
         "plaintext",
         "html"
+    ],
+    "cSpell.ignoreWords": [
+        "orinophoto"
     ]
 }

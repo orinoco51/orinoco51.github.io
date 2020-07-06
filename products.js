@@ -69,6 +69,7 @@ products.then((data) => {
          
          const productImg = new Image(650);
          productImg.src = data.imageUrl;
+         productImg.id ='imgproduct';
  
          let productPrice = document.createElement('p');
          productPrice.innerHTML = `Prix: ${data.price/100}  €`;
@@ -83,8 +84,8 @@ products.then((data) => {
                 productDiv.appendChild(productImg);
                 productDiv.appendChild(productId);
                 productDiv.appendChild(productLenses);
-                productDiv.appendChild(createParagraphe);
                 productDiv.appendChild(quantity);
+                productDiv.appendChild(createParagraphe);
                 productDiv.appendChild(productDescrip);
                 productDiv.appendChild(productPrice);
                 productDiv.appendChild(button);    

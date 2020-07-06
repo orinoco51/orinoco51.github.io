@@ -1,7 +1,41 @@
+@media screen and (max-width: 756px) {
+  #title, #title2 {
+    width: 60%;
+  }
+  h1 {
+    font-size: 1em;
+  }
+  #panier {
+    font-size: .5em;
+  }
+  .bag {
+    font-size: 2em;
+  }
+  #consult {
+    font-size: 1.3em;
+  }
+  h3 {
+    font-size: 1.2em;
+  }
+  p {
+    font-size: .6em;
+  }
+  #imgproduct {
+    width: 300px;
+  }
+  .buttons {
+    font-size: .5em;
+  }
+  #copy {
+    font-size: .4em;
+  }
+}
+
 html, body {
   height: 100%;
   width: 100%;
   overflow-x: hidden;
+  font-family: 'Roboto' , cursive;
 }
 
 .container-fluid {
@@ -25,18 +59,24 @@ html, body {
 }
 
 h1 {
-  text-align: center;
   background-color: #f3ebf3;
+  text-align: center;
 }
 
 #panier {
-  color: black;
   font-size: 1.2em;
+  color: #ae72eb;
+}
+
+#panier:hover {
+  color: #7336b1;
+  text-decoration: none;
 }
 
 .bag {
-  font-size: 2.7em;
+  font-size: 1.2em;
   margin-bottom: 35px;
+  margin-right: 10px;
   color: #ae72eb;
 }
 
@@ -44,16 +84,26 @@ h1 {
   color: #7336b1;
 }
 
+.photos {
+  border-top-left-radius: 10%;
+  border-top-right-radius: 10%;
+}
+
+.Prices {
+  border: 1px solid #000;
+  background-color: #f7e8f7;
+  width: 59%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 h3 {
   font-size: 2.6em;
+  font-family: monoton;
 }
 
 #ref {
   font-size: .6em;
-}
-
-.buttons {
-  margin-bottom: 5%;
 }
 
 #Acceuil {
@@ -62,6 +112,10 @@ h3 {
 
 .navbar {
   background-color: #f3ebf3;
+}
+
+.perso {
+  font-size: 1em;
 }
 
 #image {
@@ -84,9 +138,38 @@ p {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+.Largeur {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#divNumber0 {
+  background-color: #ebd6fc;
+}
+
+#divNumber1 {
+  background-color: #f8c4ff;
+}
+
+#divNumber2 {
+  background-color: #cb93da;
+}
+
+#divNumber3 {
+  background-color: #d1baf8;
+}
+
+#divNumber4 {
+  background-color: #c1c0fd;
+}
+
 .proDiv {
   text-align: center;
-  border-bottom: 1px solid black;
+  background-color: #b3f8e5;
+  border: 1px solid #000;
+  margin-bottom: 2%;
+  border-radius: 10%;
 }
 
 #layDiv {
@@ -94,9 +177,10 @@ p {
 }
 
 .buttons {
+  margin-bottom: 5%;
   width: 25%;
   height: 7.5%;
-  font-size: 1.8em;
+  font-size: .9em;
 }
 
 .buttons:hover {
@@ -143,14 +227,6 @@ p {
 #buttonDiv {
   text-align: center;
   margin-bottom: 4%;
-}
-
-.moinq {
-  margin-right: 5%;
-}
-
-.plus {
-  margin-left: 5%;
 }
 
 #total {
@@ -209,46 +285,11 @@ p {
   height: 10%;
 }
 
-.plus {
-  margin-left: 10%;
-}
-
-.moins {
-  margin-right: 10%;
-}
-
 #bravo, #merci {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 #return {
   text-align: center;
-}
-
-@media screen and (max-width: 756px) {
-  #title {
-    width: 40%;
-  }
-  h1 {
-    font-size: 1em;
-  }
-  #panier {
-    font-size: .5em;
-  }
-  #consult {
-    font-size: 1.3em;
-  }
-  h3 {
-    font-size: 1.2em;
-  }
-  p {
-    font-size: .6em;
-  }
-  .buttons {
-    font-size: .5em;
-  }
-  #copy {
-    font-size: .4em;
-  }
 }
 /*# sourceMappingURL=style.css.map */
