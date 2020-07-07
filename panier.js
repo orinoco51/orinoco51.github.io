@@ -22,7 +22,8 @@ if ( localStorage.length > 0 ) {
         function AddPanier (products, name) {
          
                 tbody.innerHTML += `<tr class="rowProduct">
-                                        <td class = 'nom'><img class='images' src=${products.image} width="80">${name}</td>
+                                        <td><img class='images' src=${products.image} width="80"></td>
+                                        <td class = 'nom'>${name}</td>
                                         <td class = 'priceU'>${products.price}€</td>
                                         <td class = 'quantite'><span class='nb'>${products.productNumber}</span></td>
                                         <td class = 'soustotal'>${sousTotal}€</td>

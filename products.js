@@ -1,11 +1,9 @@
 const searchUrl = location.search;
 const endUrl = searchUrl.substring('4');
 let quantVar;
-let quantitySelected;
-let resultOption;
 let parsedVar;
 let objectProd;
-
+let global = document.getElementById('global');
 const productUrl = `http://localhost:3000/api/cameras/${endUrl}`;
 
 const getData = async (url) => {
@@ -38,6 +36,7 @@ products.then((data) => {
  
          const productName = document.createElement("h2");
          productName.textContent = data.name;
+         productName.classList.add('h2');
          
          const productLenses = document.createElement("form");
          const lentilles = document.createElement('select');
@@ -51,8 +50,11 @@ products.then((data) => {
             lentilles.innerHTML += `<option id="option">${[i]}</option>`;  
          };
 
-         const createParagraphe = document.createElement('p');
-         createParagraphe.textContent = 'Veuillez sélectionner la quantité voulu';
+         let createParagraphe = document.createElement('p');
+         createParagraphe.id = 'quantityText';
+         createParagraphe.textContent = 'Sélectionnez au moins un article';
+         let quantityText = document.getElementById('quantityText');
+       
 
          const quantity = document.createElement('form');
          const selectQuantity = document.createElement('select');
@@ -106,7 +108,8 @@ products.then((data) => {
 
      let values = document.getElementsByClassName('values');
      
-     numberQuantity.addEventListener('change', () => {console.log(values[numberQuantity.selectedIndex].value)
+     numberQuantity.addEventListener('change', () => {
+         console.log(values[numberQuantity.selectedIndex].value)
     
       quantVar = (values[numberQuantity.selectedIndex].value);
       parsedVar = parseInt(quantVar);
@@ -119,6 +122,10 @@ products.then((data) => {
         image: data.imageUrl,
         productNumber: parsedVar
      };
+
+    //  if (quantVar > 0){
+    //     quantityText.style.display = 'none ';
+    //  }
     });
 
    function addElement(){
@@ -135,12 +142,29 @@ products.then((data) => {
         }else{
             addElement();
             window.location = 'panier.html'   
-        };
-            
+        };    
        });
-
+       
+       switch (data.name) {
+        case 'Zurss 50S': document.body.style.backgroundColor = ' rgb(235, 214, 252)';
+           break;
+        case 'Hirsch 400DTS': document.body.style.backgroundColor = 'rgb(248, 196, 255)';
+           break;
+        case 'Franck JS 105': document.body.style.backgroundColor = 'rgb(203, 147, 218)';
+            break;
+        case 'Kuros TTS': document.body.style.backgroundColor = ' rgb(209, 186, 248)';
+            break;
+        case 'Katatone': document.body.style.backgroundColor = 'rgb(193, 192, 253)';
+            break;
+    }
       };
     setToStorage(data);
     };
     layoutProduct();                    
 });       
+
+
+
+
+
+

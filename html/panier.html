@@ -17,6 +17,7 @@
         <meta property="og:description" content="Orinoco est le site de référence de vente des appareils photos vintage">
         <title>Orinoco mon panier</title>
         <link rel="stylesheet" href="../bootstrap-4.4.1/scss/bootstrap.css">
+        <link href="https://fonts.googleapis.com/css2?family=Monoton&family=Roboto&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
         <link rel="stylesheet" href="../style.css">
     </head>
@@ -36,11 +37,11 @@
             <table class="table table-bordered  table-sm" id='table'>
                 <thead id="thead">
                     <tr>
-                        <th scope="col">Article</th>
+                        <td scope="col" colspan="2">Article</td>
                         <th scope="col">Prix</th>
                         <th scope="col">quantité</th>
                         <th scope="col">Sous-total</th>
-                        <th scope="col"></th>
+                        <th scope="col">Supprimer</th>
                     </tr>
                 </thead>
                 <tbody id="tbody"></tbody>
@@ -75,9 +76,6 @@
                     <small id="smallLastName"></small>
                 </div>
                 <div class="form-group col-lg-3 col-sm-6">
-                    <!--<label for="inputNumber">Numéro de rue</label>
-                    <input type="text" class="form-control col-2" name="inputNumber" placeholder="N°" required="required">
-                    <small id="smallNumber"></small>-->
                     <label for="inputAddress">Adresse</label>
                     <input type="text" class="form-control" name="address" placeholder="Exemple: 12 Rue des Regex">
                     <small id="smallAdress"></small>

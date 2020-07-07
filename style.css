@@ -1,39 +1,10 @@
-@media screen and (max-width: 756px) {
-  #title, #title2 {
-    width: 60%;
-  }
-  h1 {
-    font-size: 1em;
-  }
-  #panier {
-    font-size: .5em;
-  }
-  .bag {
-    font-size: 2em;
-  }
-  #consult {
-    font-size: 1.3em;
-  }
-  h3 {
-    font-size: 1.2em;
-  }
-  p {
-    font-size: .6em;
-  }
-  #imgproduct {
-    width: 300px;
-  }
-  .buttons {
-    font-size: .5em;
-  }
-  #copy {
-    font-size: .4em;
-  }
-}
-
+@charset "UTF-8";
+/**************************************************All pages***************************************************/
 html, body {
   height: 100%;
   width: 100%;
+  margin: 0;
+  padding: 0;
   overflow-x: hidden;
   font-family: 'Roboto' , cursive;
 }
@@ -47,20 +18,6 @@ html, body {
 
 #logo, #logo2 {
   width: 5%;
-}
-
-#navpan {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-h1 {
-  background-color: #f3ebf3;
-  text-align: center;
 }
 
 #panier {
@@ -84,58 +41,78 @@ h1 {
   color: #7336b1;
 }
 
-.photos {
-  border-top-left-radius: 10%;
-  border-top-right-radius: 10%;
+p {
+  font-size: 1.4em;
 }
 
-.Prices {
-  border: 1px solid #000;
-  background-color: #f7e8f7;
-  width: 59%;
-  margin-left: auto;
-  margin-right: auto;
+.buttons {
+  margin-bottom: 5%;
+  width: 25%;
+  height: 7.5%;
+  font-size: .9em;
 }
 
-h3 {
-  font-size: 2.6em;
-  font-family: monoton;
+.buttons:hover {
+  background-color: #d392ec;
+  color: springgreen;
 }
 
-#ref {
-  font-size: .6em;
+.buttons:hover:active {
+  background-color: #9659f8;
+  color: palegreen;
 }
 
-#Acceuil {
-  width: 100%;
+footer {
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 
-.navbar {
+#flex3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #f3ebf3;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#flex4 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   background-color: #f3ebf3;
 }
 
-.perso {
-  font-size: 1em;
+#flex4 img {
+  width: 10%;
 }
 
-#image {
-  width: 100%;
-  position: absolute;
-  display: block;
+/***************************************************Index.html******************************************************/
+#navpan {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+h1 {
+  background-color: #f3ebf3;
+  text-align: center;
 }
 
 #consult {
   text-align: center;
   font-size: 50px;
-}
-
-p {
-  font-size: 1.4em;
-}
-
-#copy {
-  font-size: 15px;
-  font-family: Arial, Helvetica, sans-serif;
 }
 
 .Largeur {
@@ -172,61 +149,88 @@ p {
   border-radius: 10%;
 }
 
+.photos {
+  border-top-left-radius: 10%;
+  border-top-right-radius: 10%;
+}
+
+.Prices {
+  border: 1px solid #000;
+  background-color: #f7e8f7;
+  width: 59%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h3 {
+  font-size: 2.6em;
+  font-family: monoton;
+}
+
+/**************************************************Produits.html****************************************************/
+.h2 {
+  font-family: monoton;
+  font-size: 3em;
+}
+
+#reférence {
+  font-size: .7em;
+}
+
+#Acceuil {
+  width: 100%;
+}
+
+.navbar {
+  background-color: #f3ebf3;
+}
+
+.perso {
+  font-size: 1em;
+}
+
+#imgproduct {
+  border-radius: 20%;
+}
+
+select {
+  margin-bottom: 2%;
+}
+
+#image {
+  width: 100%;
+  position: absolute;
+  display: block;
+}
+
+#copy {
+  font-size: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 #layDiv {
   text-align: center;
-}
-
-.buttons {
-  margin-bottom: 5%;
-  width: 25%;
-  height: 7.5%;
-  font-size: .9em;
-}
-
-.buttons:hover {
-  background-color: #d392ec;
-  color: springgreen;
-}
-
-.buttons:hover:active {
-  background-color: #9659f8;
-  color: palegreen;
 }
 
 #quantity {
   padding-bottom: 3%;
 }
 
-#flex3 {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  background-color: #f3ebf3;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-#flex4 {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  background-color: #f3ebf3;
-}
-
-#flex4 img {
-  width: 10%;
-}
-
 #buttonDiv {
   text-align: center;
   margin-bottom: 4%;
+}
+
+/**********************************************Panier.html************************************************************/
+#table {
+  margin-top: 5%;
+}
+
+#form {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2%;
 }
 
 #total {
@@ -289,7 +293,151 @@ p {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-#return {
+/*************************************************Confirmation***********************************************************/
+#recapDiv {
+  margin-left: auto;
+  margin-right: auto;
   text-align: center;
+}
+
+#return {
+  margin-bottom: 2.5%;
+  margin-top: 2%;
+}
+
+#bravo {
+  text-align: center;
+  margin-top: 2%;
+  font-family: 'Dancing Script', cursive;
+}
+
+#recap {
+  text-align: center;
+  font-family: 'Dancing Script', cursive;
+}
+
+#merci {
+  text-align: center;
+  font-family: 'Dancing Script', cursive;
+}
+
+#prixFinal {
+  text-align: center;
+}
+
+#lastImage {
+  position: relative;
+  text-align: center;
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.7em;
+}
+
+#sectionText {
+  position: absolute;
+  top: 60%;
+  left: 60%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+/***********************************************Smartphone layout**************************************************/
+@media screen and (min-width: 319px) and (max-width: 767px) {
+  .navbar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  #title, #titleP, #title2 {
+    width: 50%;
+    margin-left: 25%;
+  }
+  #deleteAll {
+    width: 130px;
+  }
+  #btnCont {
+    width: 190px;
+    font-size: 1em;
+  }
+  #logo {
+    width: 5%;
+  }
+  #h3 {
+    font-size: 1.5em;
+  }
+  th, td {
+    font-size: .7em;
+  }
+  .images {
+    width: 30px;
+  }
+  #title2 {
+    width: 60%;
+  }
+  #layDiv {
+    margin-top: 10%;
+  }
+  h1 {
+    font-size: 1em;
+  }
+  #panier {
+    font-size: .5em;
+  }
+  .bag {
+    font-size: 2em;
+  }
+  .photos {
+    width: 100px;
+  }
+  .Largeur {
+    width: 350px;
+  }
+  .Prices {
+    font-size: .7em;
+  }
+  .perso {
+    font-size: .6em;
+  }
+  #consult {
+    font-size: 1.3em;
+  }
+  h3 {
+    font-size: 1.2em;
+    margin-top: 2%;
+  }
+  p {
+    font-size: .6em;
+  }
+  #imgproduct {
+    width: 300px;
+  }
+  .buttons {
+    font-size: .5em;
+  }
+  #copy {
+    font-size: .4em;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  h3 {
+    margin-top: 2%;
+  }
+  .Largeur {
+    width: 70%;
+  }
+  #deleteAll {
+    width: 190px;
+    font-size: 1.4em;
+  }
+  #btnCont {
+    width: 250px;
+    font-size: 1.4em;
+  }
+  #submit {
+    width: 270px;
+    font-size: 1.3em;
+  }
 }
 /*# sourceMappingURL=style.css.map */
