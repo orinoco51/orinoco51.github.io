@@ -10,7 +10,8 @@ const getData = async (url) => {
         };
     };
 
-    const globalProducts = getData("http://localhost:3000/api/cameras")
+const globalProducts = getData("http://localhost:3000/api/cameras") // Appel de la fonction avec l'adresse de l'Api
+//qui contient tous les produits
 
     globalProducts.then((data) => {
 

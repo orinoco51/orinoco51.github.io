@@ -45,6 +45,11 @@ p {
   font-size: 1.4em;
 }
 
+.imgAcceuil {
+  position: relative;
+  text-align: center;
+}
+
 .buttons {
   margin-bottom: 5%;
   width: 25%;
@@ -281,6 +286,10 @@ select {
   margin-bottom: 2%;
 }
 
+.nb {
+  color: #000;
+}
+
 #table {
   text-align: center;
 }
@@ -307,37 +316,52 @@ select {
 
 #bravo {
   text-align: center;
-  margin-top: 2%;
+  margin-top: 10%;
   font-family: 'Dancing Script', cursive;
+  font-size: 2.5em;
+  margin-bottom: 10%;
 }
 
 #recap {
   text-align: center;
   font-family: 'Dancing Script', cursive;
+  margin-bottom: 10%;
+  font-size: 1.7em;
 }
 
 #merci {
   text-align: center;
   font-family: 'Dancing Script', cursive;
+  margin-top: 5%;
+  margin-left: 9%;
+  white-space: nowrap;
+  font-size: 1.25em;
 }
 
 #prixFinal {
   text-align: center;
+  margin-bottom: 10%;
+  font-size: 1.7em;
+  margin-left: 10%;
 }
 
 #lastImage {
   position: relative;
   text-align: center;
   font-family: 'Dancing Script', cursive;
-  font-size: 1.7em;
+  font-size: 2em;
 }
 
 #sectionText {
   position: absolute;
-  top: 60%;
-  left: 60%;
+  top: 54%;
+  left: 45%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+}
+
+span {
+  color: #c586f0;
 }
 
 /***********************************************Smartphone layout**************************************************/
@@ -418,6 +442,53 @@ select {
   #copy {
     font-size: .4em;
   }
+  /************************************************************Confirmation smart layout************************************/
+  #return {
+    margin-bottom: 2.5%;
+    margin-top: 2%;
+    width: 120px;
+    font-size: .5em;
+  }
+  #bravo {
+    text-align: center;
+    margin-top: 2%;
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.9em;
+    margin-bottom: 10%;
+  }
+  #recap {
+    text-align: center;
+    font-family: 'Dancing Script', cursive;
+    margin-bottom: 10%;
+    font-size: 1.7em;
+  }
+  #merci {
+    text-align: center;
+    font-family: 'Dancing Script', cursive;
+    margin-top: 3%;
+    margin-left: 9%;
+    white-space: nowrap;
+    font-size: 1.15em;
+  }
+  #prixFinal {
+    text-align: center;
+    margin-bottom: 10%;
+    font-size: 1.5em;
+    margin-left: 10%;
+  }
+  #lastImage {
+    position: relative;
+    text-align: center;
+    font-family: 'Dancing Script', cursive;
+    font-size: .7em;
+  }
+  #sectionText {
+    position: absolute;
+    top: 54%;
+    left: 45%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 992px) {
@@ -438,6 +509,52 @@ select {
   #submit {
     width: 270px;
     font-size: 1.3em;
+  }
+  #return {
+    margin-bottom: 2.5%;
+    margin-top: 2%;
+    width: 120px;
+    font-size: .5em;
+  }
+  #bravo {
+    text-align: center;
+    margin-top: 2%;
+    font-family: 'Dancing Script', cursive;
+    font-size: 3.9em;
+    margin-bottom: 10%;
+  }
+  #recap {
+    text-align: center;
+    font-family: 'Dancing Script', cursive;
+    margin-bottom: 10%;
+    font-size: 2.7em;
+  }
+  #merci {
+    text-align: center;
+    font-family: 'Dancing Script', cursive;
+    margin-top: 3%;
+    margin-left: 9%;
+    white-space: nowrap;
+    font-size: 2.15em;
+  }
+  #prixFinal {
+    text-align: center;
+    margin-bottom: 10%;
+    font-size: 2.5em;
+    margin-left: 10%;
+  }
+  #lastImage {
+    position: relative;
+    text-align: center;
+    font-family: 'Dancing Script', cursive;
+    font-size: .7em;
+  }
+  #sectionText {
+    position: absolute;
+    top: 54%;
+    left: 45%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
   }
 }
 /*# sourceMappingURL=style.css.map */
