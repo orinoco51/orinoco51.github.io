@@ -1,12 +1,13 @@
 @charset "UTF-8";
 /**************************************************All pages***************************************************/
-html, body {
+html,
+body {
   height: 100%;
   width: 100%;
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-  font-family: 'Roboto' , cursive;
+  font-family: 'Roboto', cursive;
 }
 
 .container-fluid {
@@ -16,8 +17,16 @@ html, body {
   height: 100%;
 }
 
-#logo, #logo2 {
-  width: 5%;
+#logo {
+  width: 15%;
+}
+
+#logo2 {
+  width: 15%;
+}
+
+#titleP {
+  margin-right: 60%;
 }
 
 #panier {
@@ -54,7 +63,7 @@ p {
   margin-bottom: 5%;
   width: 25%;
   height: 7.5%;
-  font-size: .9em;
+  font-size: 0.9em;
 }
 
 .buttons:hover {
@@ -179,7 +188,7 @@ h3 {
 }
 
 #reférence {
-  font-size: .7em;
+  font-size: 0.7em;
 }
 
 #Acceuil {
@@ -298,7 +307,8 @@ select {
   height: 10%;
 }
 
-#bravo, #merci {
+#bravo,
+#merci {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
@@ -373,7 +383,9 @@ span {
     -ms-flex-pack: distribute;
         justify-content: space-around;
   }
-  #title, #titleP, #title2 {
+  #title,
+  #titleP,
+  #title2 {
     width: 50%;
     margin-left: 25%;
   }
@@ -390,8 +402,9 @@ span {
   #h3 {
     font-size: 1.5em;
   }
-  th, td {
-    font-size: .7em;
+  th,
+  td {
+    font-size: 0.7em;
   }
   .images {
     width: 30px;
@@ -406,7 +419,7 @@ span {
     font-size: 1em;
   }
   #panier {
-    font-size: .5em;
+    font-size: 0.5em;
   }
   .bag {
     font-size: 2em;
@@ -418,10 +431,10 @@ span {
     width: 350px;
   }
   .Prices {
-    font-size: .7em;
+    font-size: 0.7em;
   }
   .perso {
-    font-size: .6em;
+    font-size: 0.6em;
   }
   #consult {
     font-size: 1.3em;
@@ -431,23 +444,23 @@ span {
     margin-top: 2%;
   }
   p {
-    font-size: .6em;
+    font-size: 0.6em;
   }
   #imgproduct {
     width: 300px;
   }
   .buttons {
-    font-size: .5em;
+    font-size: 0.5em;
   }
   #copy {
-    font-size: .4em;
+    font-size: 0.4em;
   }
   /************************************************************Confirmation smart layout************************************/
   #return {
     margin-bottom: 2.5%;
     margin-top: 2%;
     width: 120px;
-    font-size: .5em;
+    font-size: 0.5em;
   }
   #bravo {
     text-align: center;
@@ -480,7 +493,7 @@ span {
     position: relative;
     text-align: center;
     font-family: 'Dancing Script', cursive;
-    font-size: .7em;
+    font-size: 0.7em;
   }
   #sectionText {
     position: absolute;
@@ -514,7 +527,7 @@ span {
     margin-bottom: 2.5%;
     margin-top: 2%;
     width: 120px;
-    font-size: .5em;
+    font-size: 0.5em;
   }
   #bravo {
     text-align: center;
@@ -547,7 +560,7 @@ span {
     position: relative;
     text-align: center;
     font-family: 'Dancing Script', cursive;
-    font-size: .7em;
+    font-size: 0.7em;
   }
   #sectionText {
     position: absolute;
