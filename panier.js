@@ -151,31 +151,11 @@ firstValue.addEventListener('change', () => validInput(regObject.firstName, firs
 
 secondValue.addEventListener('change', () => validInput(regObject.name, secondValue.value,'#smallLastName','un Nom', smallLastName))
 
-adressValue.addEventListener('change', () =>validInput(regObject.adress,
-    adressValue.value,
-    '#smallAdress',
-    'une adrese',
-    smallAdress
-  )
-)
-townValue.addEventListener('change', () =>
-  validInput(
-    regObject.ville,
-    townValue.value,
-    '#smallCity',
-    'Un nom de ville',
-    smallCity
-  )
-)
-emailValue.addEventListener('change', () =>
-  validInput(
-    regObject.email,
-    emailValue.value,
-    '#smallEmail',
-    'un email',
-    smallEmail
-  )
-)
+adressValue.addEventListener('change', () => validInput(regObject.adress,adressValue.value,'#smallAdress','une adrese',smallAdress))
+
+townValue.addEventListener('change', () => validInput(regObject.ville,townValue.value,'#smallCity','Un nom de ville',smallCity))
+
+emailValue.addEventListener('change', () => validInput( regObject.email, emailValue.value, '#smallEmail','un email', smallEmail))
 
 form.addEventListener('submit', e => {
   e.preventDefault()
