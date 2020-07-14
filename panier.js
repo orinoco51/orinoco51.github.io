@@ -68,6 +68,19 @@ const deleteButton = document.getElementsByClassName('deleteButton')
 const deleteAll = document.getElementById('deleteAll')
 const displayTitle = document.getElementById('h2')
 
+for (let b = 0; b < deleteButton.length; b++) {
+        
+  deleteButton[b].addEventListener('click', () => {// au click sur le bouton 
+
+      deleteRow[b].remove(); // Suppression de la ligne 
+      localStorage.removeItem(localStorage.key(b)); //Supression de la clé du localStorage qui est contenait les données de la ligne
+      calcul = calcul - arrayPrices[b];// et recalcul du panier en supprimant le prix qui a été éffacé
+      somme.innerHTML = `${calcul}€`; // affichage du nouveau prix dans la case total
+
+      calcul == 0  ? displayTitle.style.display = 'block' : displayTitle.style.display = 'none'
+  });    
+};
+
 localStorage.length !== 0 ? (displayTitle.style.display = 'none') : (displayTitle.style.display = 'block')
 // ternaire pour l'affichage du texte pour la suppression globale du panier
 
@@ -217,7 +230,7 @@ form.addEventListener('submit', e => {
             smallEmail.classList.contains('text-danger')
           ) {
             e.preventDefault()
-            alert('Un ou plusieurs champs contiennent des erreur') // raisons du blocage de l'envoi du formulaire
+            alert('Un ou plusieurs champs contiennent des erreurs') // raisons du blocage de l'envoi du formulaire
           } else if (commande.products.length == 0) {
             e.preventDefault()
             alert('Veuillez insérer au moins un artcile dans votre panier avant de passer commande')
