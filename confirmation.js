@@ -2,9 +2,9 @@ const confirmObject = JSON.parse(sessionStorage.getItem('resume')) //Récupérat
 
 console.log(confirmObject.idCom)
 
-const orderNumber = confirmObject.idCom.substring(0, 8) // Utilisation de la méthode substring pour retirer les caractères
-// de l'id qui ne changent pas. (le serveur renvoi un id de confirmation de commande avec une trentaines de caractères,
-//mais seulement 8 d'entre eux change en fonction des différentes commandes, nous gardons donc les 8 dans une variable orderNumber)
+const orderNumber = confirmObject.idCom.substring(0, 8) /* Utilisation de la méthode substring pour retirer les caractères
+ de l'id qui ne changent pas. (le serveur renvoi un id de confirmation de commande avec une trentaines de caractères,
+mais seulement 8 d'entre eux change en fonction des différentes commandes, nous gardons donc les 8 dans une variable orderNumber)*/
 console.log(orderNumber)
 
 //Création des éléments html dans lesquels nous allons insérer les informations de confirmation de commande
@@ -40,8 +40,8 @@ const lastImage = document.getElementById('lastImage')
 
 lastImage.appendChild(section)
 
-// Au click sur le bouton "revenir à l'acceuil" ou sur le h1 une fonction éfface toutes les informations contenues dans
-// le localStorage et dans le sessionStorage
+/* Au click sur le bouton "revenir à l'acceuil" ou sur le titre de la page une fonction efface toutes les informations contenues dans
+ le localStorage, le sessionStorage et le panier */
 
 const clearSession = document.getElementById('clearSession')
 

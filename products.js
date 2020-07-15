@@ -1,4 +1,4 @@
-let quantVar; // déclaration des varaiables au niveau globale pour lesquelles une valeur leur sera assigné au moment voulu
+let quantVar; // déclaration des varaiables au niveau globale pour lesquelles une valeur leur sera assigné lors de l'utilisation de celles ci
 let parsedVar;
 let objectProd;
 
@@ -40,7 +40,7 @@ products.then((data) => { // Création des diférents éléments de la même man
          newDiv.appendChild(productDiv); // On ajoute la div "col" dans la div "row"
 
          switch (data.name) {//Utilisation du switch pour  changer la couleur de fond du body
-            //dynamiquement en fonction du produit séléction 
+            //dynamiquement en fonction du produit séléctioné
             case 'Zurss 50S': document.body.style.backgroundColor = ' rgb(240, 230, 248)';
                break;
             case 'Hirsch 400DTS': document.body.style.backgroundColor = 'rgb(251, 230, 254)';
@@ -129,13 +129,13 @@ products.then((data) => { // Création des diférents éléments de la même man
       parsedVar = parseInt(quantVar);
       console.log(parsedVar);
 
-       objectProd = {// Un objet est créer contenant toute les informations dont nous avons besoins d'envoyer dans le 
+       objectProd = {// Un objet est créer contenant toute les informations que nous avons besoins d'envoyer dans le 
        // localStorage notamment la quantité choisie par l'utilisateur qui nous permettra de faire le calcul du prix total
 
-        price: data.price/100,
-        id: data._id,
-        image: data.imageUrl,
-        productNumber: parsedVar
+        price: data.price/100, // le prix de l'objet
+        id: data._id, // l'id qui nous servira lors de l'envoi au serveur
+        image: data.imageUrl, //l'image que nous afficherons dans le panier
+        productNumber: parsedVar // et la quantité choisi par l'utilisateur
      };
     });
        button.addEventListener('click', (e) => {// Au click sur le bouton ajouté au panier nous ajoutons une condition

@@ -4,12 +4,12 @@
 //Déclaration des variables dont nous aurons besoins dans le scope global
 let cpt
 let arrayPrices = [] // création d un tableau vide dans lequel nous stockerons les prix des articles
-let products = [] // et dans la variable products un tableau vide dans lequel nous stocjerons les id des produits
-// ajoutés au panier que nous enverrons au serveur lors de la confirmation de commande par l'utilisateur
+let products = [] /* et dans la variable products un tableau vide dans lequel nous stockerons les id des produits
+ ajoutés au panier que nous enverrons au serveur lors de la confirmation de commande par l'utilisateur*/
 let store
 let sousTotal
 let tbody = document.getElementById('tbody')
-let calcul = 0
+let calcul = 0 // la variable calcul est initialisée a 0 c'est elle qui contiendra le prix total
 
 function addPanier (product, name) {
   // La fonction addPanier ajoute une ligne au panier a chaque click de l'utilisateur sur le produit
@@ -32,9 +32,9 @@ function calculCart () {
   somme.innerHTML = `${0}€`
 
   for (let i in arrayPrices) {
-    // la boucle for in parcours le tableau arrayPrices dans lequel sont ajouté chaque nouveau
-    //prix des produits sélectionnés par l'utilisateur donc à chaque ajout d'un article dans le panier le prix est ajouté
-    //dans arrayPrices, et la boucle for in permet de recalculer le total a chaque ajout
+    /*la boucle for in parcours le tableau arrayPrices dans lequel sont ajouté chaque nouveau
+    prix des produits sélectionnés par l'utilisateur, donc à chaque ajout d'un article dans le panier le prix est ajouté
+    dans arrayPrices, et la boucle for in permet de recalculer le total a chaque ajout*/
 
     calcul = calcul + arrayPrices[i]
     somme.innerHTML = `${calcul}€` // le prix est affiché dans la case total
@@ -44,20 +44,20 @@ function calculCart () {
 if (localStorage.length > 0) {
   //Récupération des données présentes dans le localStorage
 
-  for (i = 0; i < localStorage.length; i++) {
+  for (i = 0; i < localStorage.length; i++) {// Récupération des données présentes dans le localStorage
     store = JSON.parse(localStorage.getItem(localStorage.key(i))) // On convertit l'objet JSON en objet JS
     let productName = localStorage.key(i) // On récupère le nom de la clé qu'on stock dans une variable
 
-    sousTotal = store.price * store.productNumber // Le sous total corresspond au prix d'un article qu'on multipli
-    // par le nombre de la quantité sélectionnée par l'utilisateur
+    sousTotal = store.price * store.productNumber /* Le sous total corresspond au prix d'un article qu'on multiplie
+     par le nombre de la quantité sélectionnée par l'utilisateur*/
 
-    arrayPrices.push(sousTotal) // On insère chaque nouveau prix qui provient du localStorage dans le tableau
-    products.push(store.id) // on insère chaque id dans le tableau "products" qui nous servira lors de l'envoi au serveur
+    arrayPrices.push(sousTotal) // Nous insèrons chaque nouveau prix qui provient du localStorage dans le tableau
+    products.push(store.id) // Nous insèrons chaque id dans le tableau "products" qui nous servira lors de l'envoi au serveur
 
-    addPanier(store, productName) // On apelle la fonction addPanier
+    addPanier(store, productName) // Nous apellons la fonction addPanier
   }
 }
-calculCart(store) // on apelle la fonction calculCart
+calculCart(store) // Nous  apellons la fonction calculCart
 
 //Nous récupèrons les éléments html dont nous avons besoin pour effacer le panier ligne par ligne
 // et nous les stockons dans des constantes
@@ -94,7 +94,10 @@ deleteAll.addEventListener('click', () => {
 
 //******************************************   Validation du formulaire    *****************************************************************
 
-//Récupération de données du formulaire que nous assignons comme valeurs de variables
+let contact
+let commande
+
+//Récupération de données du formulaire que nous assignons comme valeurs à nos variables
 const form = document.querySelector('#form')
 
 let firstValue = form.firstName
@@ -104,7 +107,7 @@ let townValue = form.city
 let emailValue = form.email
 
 const submitButton = document.querySelector('#submit')
-
+// Nous récupérons les balises small pour pouvoir les utiliser
 const smallFistName = document.getElementById('smallFirstName')
 const smallLastName = document.getElementById('smallLastName')
 const smallAdress = document.getElementById('smallAdress')
@@ -112,8 +115,7 @@ const smallCity = document.getElementById('smallCity')
 const smallEmail = document.getElementById('smallEmail')
 
 const regObject = {
-    // Création d'un objet avec plusieurs propriétés, chaque propriétés est une regex qui concerne
-    //un input précis
+    // Création d'un objet avec pour chaque propriétés est une regex qui concerne un input précis
     firstName: /^[a-zâäàéèùêëîïôöçñA-Z-\s]{3,25}$/, // exemple EXEMPLE de Prenom 3 à 25 caractères
     name: /^[a-zâäàéèùêëîïôöçñA-Z-\s]{3,25}$/, // exemple EXEMPLE de Nom 3 à 25 caractères
     adress: /^[0-9]{1,5}( [-a-zA-Zàâäéèêëïîôöùûüç]+)+$/, // 12 rue des exemples
@@ -121,15 +123,12 @@ const regObject = {
     email: /^[a-zâäàéèùêëîïôöçñA-Z0-9.-_]+[@]{1}[a-zA_Z0-9.-_]+[.]{1}[a-z]{2,4}$/ // monemail-exemple_TEST02 @ email-_TEST99 . test
   }
 
-let contact
-let commande
-
 //Fonction qui validera chaque input, à l 'aide des regex, comme les regex diffèrent en fonction de l'input,
 //nous utilisons une seule fonction avec des paramètres pour pouvoir la réutilisé pour chaque input
 
 function validInput (regInput, inputValue, smallInput, inputName, smallId) {
   if (regInput.test(inputValue) == false) {
-    //Si le test de la regex retourne false, ou que l'input est vide
+    //Si le test de la regex retourne false
 
     document.querySelector(smallInput).innerHTML = `Veuillez entrer ${inputName} valide `
     // la balise small affiche le texte `Veuillez entrer ${inputName} valide `
@@ -169,17 +168,16 @@ form.addEventListener('submit', e => {
     email: e.target.email.value
   }
 
-  commande = {
-    // l'objet commande est l'objet final que nous envoyons au serveur il contient un array avec tout les id
-    // des produits que l'utilisateur à acheter ainsi que l'objet contact
+  commande = { /* l'objet commande est l'objet final que nous envoyons au serveur il contient un array avec tout les id
+   des produits que l'utilisateur à acheter ainsi que l'objet contact*/
     products,
     contact
   }
 
   const options = {
-    // cette constante va nous permettre de faire notre requête HTTP en utilisant le fetch,on specifie
-    // ici que la méthode utilisé est POST (nous envoyons une requête au serveur, le body sera l'objet commande
-    //et nous précisons dans le headers que notre objet sera un json pour faciliter la comprehension au serveur)
+    /* cette constante va nous permettre de faire notre requête ajax en utilisant le fetch,on specifie
+    ici que la méthode utilisé est POST (nous envoyons une requête au serveur, le body sera l'objet commande
+    et nous précisons dans le headers que notre objet sera un json pour faciliter la comprehension au serveur)*/
     method: 'POST',
     body: JSON.stringify(commande),
     headers: {
@@ -220,8 +218,8 @@ form.addEventListener('submit', e => {
             console.log(res.orderId) //on affiche l'id qui nous a été retourné par le serveur dans la console
     
             let objectCom = {
-              //Nous créons l'objet ObjectCom que nous enverrons dans le sessionStorage avec toutes les donées
-              //qui nous servirons dans notre page confirmation.html
+              /*Nous créons l'objet ObjectCom que nous enverrons dans le sessionStorage avec toutes les donées
+              qui nous servirons dans notre page confirmation.html*/
               prix: calcul, //Le prix total final
               prenom: contact.firstName, //le prénom de l'utilisateur
               idCom: res.orderId // et l'id qui nous a été retourné par le serveur

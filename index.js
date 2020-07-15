@@ -1,4 +1,4 @@
-/* requête HTML pour récupérer les informations de l'API avec l'utilisation de fetch,
+/* requête ajax pour récupérer les informations de l'API avec l'utilisation de fetch,
  sous forme de fonction asynchrone stockée dans une constante pour pouvoir la réutiliser */
 const getData = async url => { //un url est assigné en paramètre
   try {
@@ -12,7 +12,7 @@ const getData = async url => { //un url est assigné en paramètre
 const globalProducts = getData('http://localhost:3000/api/cameras') // Appel de la fonction avec l'adresse de l'Api
 //qui contient tous les produits
 
-globalProducts.then(data => {//utilisation des promises avec le then en cas de renvoi des données de l'api
+globalProducts.then(data => {
 
   const creation = i => {/* la fonction création utilisera les données renvoyées par l'api et manipulera le dom html 
   pour créer les différents élements nécéssaires à l'affichage de la page */
@@ -35,7 +35,7 @@ globalProducts.then(data => {//utilisation des promises avec le then en cas de r
     et on ajoute l'image qui correspond à l'article)*/
 
     const productName = document.createElement('h3')
-    productName.textContent = data[i].name // correspont à la donnée name de l'objet json renvoyé par l'api
+    productName.textContent = data[i].name // data[i].name correspont à la donnée name de l'objet json renvoyé par l'api
 
     const productPrice = document.createElement('p')
     productPrice.textContent = `Prix: ${data[i].price / 100}  €` // la donnée price
@@ -46,7 +46,7 @@ globalProducts.then(data => {//utilisation des promises avec le then en cas de r
     productLenses.classList.add('perso')
 
     const productImg = new Image(250)
-    productImg.src = data[i].imageUrl // le lien vers l'image du produit qui ajouté en attribut src de l'objet Image
+    productImg.src = data[i].imageUrl // le lien vers l'image du produit qui est ajouté en attribut src de l'objet Image
 
     productImg.classList.add('photos')
 
@@ -68,4 +68,3 @@ globalProducts.then(data => {//utilisation des promises avec le then en cas de r
     creation(i)
   }
 })
-//.catch
