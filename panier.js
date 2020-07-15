@@ -89,6 +89,7 @@ deleteAll.addEventListener('click', () => {
   tbody.remove() //éfface tout le tableau
   somme.innerHTML = 0 + '€' // remet le prix affiché à 0
   localStorage.clear() // efface toutes les informations du localStaorage
+  sessionStorage.clear()// efface aussi toutes les informations du sessionStorage
   displayTitle.style.display = 'block' // réaffiche le titre "le panier est vide"
 })
 
