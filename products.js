@@ -131,7 +131,7 @@ products.then((data) => { // Création des diférents éléments de la même man
 
        objectProd = {// Un objet est créer contenant toute les informations que nous avons besoins d'envoyer dans le 
        // localStorage notamment la quantité choisie par l'utilisateur qui nous permettra de faire le calcul du prix total
-
+        name: data.name,
         price: data.price/100, // le prix de l'objet
         id: data._id, // l'id qui nous servira lors de l'envoi au serveur
         image: data.imageUrl, //l'image que nous afficherons dans le panier

@@ -9,6 +9,7 @@ let products = [] /* et dans la variable products un tableau vide dans lequel no
 let store
 let sousTotal
 let tbody = document.getElementById('tbody')
+const arrayProd = []
 let calcul = 0 // la variable calcul est initialisée a 0 c'est elle qui contiendra le prix total
 
 function addPanier (product, name) {
@@ -21,8 +22,7 @@ function addPanier (product, name) {
                             <td class = 'priceU'>${product.price}€</td>
                             <td class = 'quantite'><span class='nb'>${product.productNumber}</span></td>
                             <td class = 'soustotal'>${sousTotal}€</td>
-                            <td class='sup'><button class="btn btn-danger deleteButton"><i class="fas fa-trash"></i></button></td>
-                        </tr>`
+                      </tr>`
 }
 
 function calculCart () {
@@ -55,6 +55,7 @@ if (localStorage.length > 0) {
     products.push(store.id) // Nous insèrons chaque id dans le tableau "products" qui nous servira lors de l'envoi au serveur
 
     addPanier(store, productName) // Nous apellons la fonction addPanier
+    //arrayProd.push(deleteRow);
   }
 }
 calculCart(store) // Nous  apellons la fonction calculCart
@@ -62,31 +63,17 @@ calculCart(store) // Nous  apellons la fonction calculCart
 //Nous récupèrons les éléments html dont nous avons besoin pour effacer le panier ligne par ligne
 // et nous les stockons dans des constantes
 
-const deleteRow = document.getElementsByClassName('rowProduct')
-const deleteButton = document.getElementsByClassName('deleteButton')
 
 const deleteAll = document.getElementById('deleteAll')
 const displayTitle = document.getElementById('h2')
-
-for (let b = 0; b < deleteButton.length; b++) {
-        
-  deleteButton[b].addEventListener('click', () => {// au click sur le bouton 
-
-      deleteRow[b].remove(); // Suppression de la ligne 
-      localStorage.removeItem(localStorage.key(b)); //Supression de la clé du localStorage qui est contenait les données de la ligne
-      calcul = calcul - arrayPrices[b];// et recalcul du panier en supprimant le prix qui a été éffacé
-      somme.innerHTML = `${calcul}€`; // affichage du nouveau prix dans la case total
-
-      calcul == 0  ? displayTitle.style.display = 'block' : displayTitle.style.display = 'none'
-  });    
-};
+//console.log(arrayProd)
 
 localStorage.length !== 0 ? (displayTitle.style.display = 'none') : (displayTitle.style.display = 'block')
 // ternaire pour l'affichage du texte pour la suppression globale du panier
 
 //Fonction qui efface le panier en totalité au click sur le bouton "vider le panier"
 deleteAll.addEventListener('click', () => {
-  tbody.remove() //éfface tout le tableau
+  tbody.remove() //efface tout le tableau
   somme.innerHTML = 0 + '€' // remet le prix affiché à 0
   localStorage.clear() // efface toutes les informations du localStaorage
   sessionStorage.clear()// efface aussi toutes les informations du sessionStorage
