@@ -175,51 +175,52 @@ form.addEventListener('submit', e => {
 
   const postData = async () => {
     try{
-      await fetch('http://localhost:3000/api/cameras/order', options)// notre requete (POST), pour envoyer les informations de commande au serveur
-      .then(res => res.json()) //avec nos promises qui sont chainées,
-      .then(res => {
-          if (
-            firstValue.value == false ||
-            secondValue.value == false ||
-            adressValue.value == false ||
-            townValue.value == false ||
-            emailValue.value == false
-          ) {
-            //La condition stop l'envoi de l'objet commande si une des valeurs des input est vide
-            e.preventDefault()
-            alert('Tous les champs ne sont pas remplis ') // raisons du blocage de l'envoi du formulaire
-          } else if (
-            smallFistName.classList.contains('text-danger') ||
-            smallLastName.classList.contains('text-danger') ||
-            smallAdress.classList.contains('text-danger') ||
-            smallCity.classList.contains('text-danger') ||
-            smallEmail.classList.contains('text-danger')
-          ) {
-            e.preventDefault()
-            alert('Un ou plusieurs champs contiennent des erreurs') // raisons du blocage de l'envoi du formulaire
-          } else if (commande.products.length == 0) {
-            e.preventDefault()
-            alert('Veuillez insérer au moins un artcile dans votre panier avant de passer commande')
-          } else {
-            //si tous les inputs ont été validés et que le panier n'est pas vide
-    
-            console.log(res.orderId) //on affiche l'id qui nous a été retourné par le serveur dans la console
-    
-            let objectCom = {
-              /*Nous créons l'objet ObjectCom que nous enverrons dans le sessionStorage avec toutes les donées
-              qui nous servirons dans notre page confirmation.html*/
-              prix: calcul, //Le prix total final
-              prenom: contact.firstName, //le prénom de l'utilisateur
-              idCom: res.orderId // et l'id qui nous a été retourné par le serveur
+        if (
+          firstValue.value == false ||
+          secondValue.value == false ||
+          adressValue.value == false ||
+          townValue.value == false ||
+          emailValue.value == false
+        ) {
+          //La condition stop l'envoi de l'objet commande si une des valeurs des input est vide
+          e.preventDefault()
+          alert('Tous les champs ne sont pas remplis ') // raisons du blocage de l'envoi du formulaire
+        } else if (
+          smallFistName.classList.contains('text-danger') ||
+          smallLastName.classList.contains('text-danger') ||
+          smallAdress.classList.contains('text-danger') ||
+          smallCity.classList.contains('text-danger') ||
+          smallEmail.classList.contains('text-danger')
+        ) {
+          e.preventDefault()
+          alert('Un ou plusieurs champs contiennent des erreurs') // raisons du blocage de l'envoi du formulaire
+        } else if (commande.products.length == 0) {
+          e.preventDefault()
+          alert('Veuillez insérer au moins un artcile dans votre panier avant de passer commande')
+        } else {await fetch('http://localhost:3000/api/cameras/order', options)// notre requete (POST), pour envoyer les informations de commande au serveur
+        .then(res => res.json()) //avec nos promises qui sont chainées,
+        .then(res => {{
+              //si tous les inputs ont été validés et que le panier n'est pas vide
+      
+              console.log(res.orderId) //on affiche l'id qui nous a été retourné par le serveur dans la console
+      
+              let objectCom = {
+                /*Nous créons l'objet ObjectCom que nous enverrons dans le sessionStorage avec toutes les donées
+                qui nous servirons dans notre page confirmation.html*/
+                prix: calcul, //Le prix total final
+                prenom: contact.firstName, //le prénom de l'utilisateur
+                idCom: res.orderId // et l'id qui nous a été retourné par le serveur
+              }
+      
+              console.log(objectCom)
+      
+              let confirmation = JSON.stringify(objectCom) // Nous convertissons objectCom au format JSON
+              sessionStorage.setItem('resume', confirmation) //Nous envoyons cet objet dans le sessionStorage
+              window.location = 'confirmation.html' // et enfin nous redirigeons l'utilisateur vers la page confirmation
             }
-    
-            console.log(objectCom)
-    
-            let confirmation = JSON.stringify(objectCom) // Nous convertissons objectCom au format JSON
-            sessionStorage.setItem('resume', confirmation) //Nous envoyons cet objet dans le sessionStorage
-            window.location = 'confirmation.html' // et enfin nous redirigeons l'utilisateur vers la page confirmation
-          }
-        })
+          })
+
+        }
     } catch (e){
       throw(e)
     }
