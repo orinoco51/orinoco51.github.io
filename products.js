@@ -115,7 +115,7 @@ products.then((data) => { // Création des diférents éléments de la même man
      const numberQuantity = document.getElementById('selectQuantity');
 
      for (let c = 0; c < 101; c++) {// La boucle for va servir au choix de la quantité d'appareil que l'utilisateur souhaitera
-       numberQuantity.innerHTML += `<option class="values" selected="selected" value="${[c]}"}>${[c]}</option>`; 
+       numberQuantity.innerHTML += `<option class="values"  value="${[c]}"}>${[c]}</option>`; 
      };
 
      let values = document.getElementsByClassName('values');
