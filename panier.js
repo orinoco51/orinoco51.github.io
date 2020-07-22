@@ -230,5 +230,9 @@ form.addEventListener('submit', e => {
       throw(e)
     }
 }
-postData()
+if(commande.products.length == 0){
+  console.log('erreur !')
+}else{
+  postData()
+}
 })
